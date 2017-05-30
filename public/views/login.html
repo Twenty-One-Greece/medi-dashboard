@@ -1,0 +1,23 @@
+<form name="login" class="row" ng-submit="handleSubmit(loginData)">
+    <md-card class="col-xs-6 col-xs-offset-3">
+        <md-card-content>
+            <md-input-container class="col-xs-12">
+                <label>Username</label>
+                <input name="username" ng-model="loginData.username" required>
+                <div ng-messages="login.username.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="col-xs-12">
+                <label>Password</label>
+                <input name="password" ng-model="loginData.password" required>
+                <div ng-messages="login.password.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+        </md-card-content>
+        <md-card-footer>
+            <md-button class="btn1 col-xs-12" type="submit"> Login </md-button>
+        </md-card-footer>
+    </md-card>
+</form>

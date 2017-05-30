@@ -1,0 +1,26 @@
+<div class="col-sm-3 col-xs-2 no-padding" ng-controller="menu" ng-include="'includes/sidemenu.html'"></div>
+<!--Users List-->
+<md-card class="col-sm-8 col-xs-10">
+    <md-card-content>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ΟΝΟΜΑ</th>
+                    <th>USERNAME</th>
+                    <th>EMAIL</th>
+                    <th>ΤΗΛΕΦΩΝΟ</th>
+                    <th>ΠΕΡΙΟΡΙΣΜΟΣ ΔΙΑΦ.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users" ng-click="selectUser(user._id)">
+                    <td>{{user.name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.telephone}}</td>
+                    <td>{{user.ads}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,44 @@
+<div class="col-sm-3 col-xs-2 no-padding" ng-controller="menu" ng-include="'includes/sidemenu.html'"></div>
+<!--Selected Ad-->
+<!--<md-card class="col-sm-8 col-xs-10">
+    <md-card-actions>
+        <md-button ng-click="changeActiveStatus(selectedAd, 'Yes')">Accept</md-button>
+        <md-button ng-click="changeActiveStatus(selectedAd, 'No')">Reject</md-button>
+        <md-button ng-click="showDeleteConfirm($event, selectedAd._id)"> Delete </md-button>
+    </md-card-actions>
+</md-card>-->
+<!--Selected Ad-->
+<md-card class="col-sm-8 col-xs-10">
+    <img class="card-image" ng-src="http://www.hikorean.news/sites/default/files/inline-images/%EC%97%AC%EB%9F%AC%EA%B0%9C%20%EC%9A%B0%EC%82%B0_0.jpg" class="md-card-image" alt="Washed Out">
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{selectedAd.title}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <span class="info col-md-4"><strong>Κατασκευαστής:</strong> {{selectedAd.brand}}</span>
+        <span class="info col-md-4"><strong>Έτος Κατασκευής:</strong> {{selectedAd.year}}</span>
+        <span class="info col-md-4"><strong>Έτος Πρώτης χρήσης:</strong> {{selectedAd.yearOfUse}}</span>
+        <span class="info col-md-4"><strong>Τιμή:</strong> {{selectedAd.price}} € </span>
+        <span class="info col-md-4"><strong>Σήμανση:</strong> {{selectedAd.marking}}</span>
+        <span class="info col-md-4"><strong>Κεφαλές:</strong> {{selectedAd.heads}}</span>
+        <span class="info col-md-4"><strong>Λυχνίες:</strong> {{selectedAd.lamps}}</span>
+        <span class="info col-md-4"><strong>Κατηγορία:</strong> {{selectedAd.category}}</span>
+        <span class="info col-md-4"><strong>Παροχή Ρευματος:</strong> {{selectedAd.powerSuply}}</span>
+        <span class="info col-md-4"><strong>Ενεργή:</strong> {{selectedAd.active}}</span>
+        <span class="info col-md-4"><strong>Τηλέφωνο Επικοινωνίας:</strong> {{selectedAd.contactPhone}}</span>
+        <span class="info col-md-4"><strong>Email Επικοινωνίας:</strong> {{selectedAd.contactEmail}}</span>
+        <h4 class="description col-md-12">Περιγραφή</h4>
+        <p class="col-md-12">{{selectedAd.description}}</p>
+    </md-card-content>
+    <md-card-actions>
+        <md-button class="inside-btn1 col-xs-1" ng-click="changeActiveStatus(selectedAd, 'Yes')">Αποδοχη</md-button>
+        <md-button class="inside-btn2 col-xs-1" ng-click="changeActiveStatus(selectedAd, 'No')">Αποριψη</md-button>
+        <md-button class="inside-btn3 col-xs-1" ng-click="showDeleteConfirm($event, selectedAd._id)"> Διαγραφη </md-button>
+        <md-input-container class="col-xs-3 col-xs-offset-2">
+            <label>Προτεραιότητα</label>
+            <input ng-model="selectedAd.featured">
+        </md-input-container>
+        <md-button class="inside-btn1 col-xs-3" ng-click="setFeatured(selectedAd)">Ορισμος Προβεβλημενης</md-button>
+    </md-card-actions>
+</md-card>

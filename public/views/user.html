@@ -1,0 +1,69 @@
+<div class="col-sm-3 col-xs-2 no-padding" ng-controller="menu" ng-include="'includes/sidemenu.html'"></div>
+<!--Selected User-->
+<md-card class="col-sm-7 col-xs-10">
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">{{selectedUser.username}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content ng-if="editing">
+        <md-input-container class="col-xs-12">
+            <label>Ονοματεπώνυμο</label>
+            <input ng-model="selectedUser.name" required>
+            <div ng-messages="selectedUser.name.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Email</label>
+            <input ng-model="selectedUser.email" required>
+            <div ng-messages="selectedUser.email.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Χώρα</label>
+            <input ng-model="selectedUser.country" required>
+            <div ng-messages="selectedUser.country.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Πόλη</label>
+            <input ng-model="selectedUser.city">
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Δ/νση</label>
+            <input ng-model="selectedUser.address">
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Τηλέφωνο</label>
+            <input ng-model="selectedUser.telephone">
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Εταιρία</label>
+            <input ng-model="selectedUser.company">
+        </md-input-container>
+        <md-input-container class="col-xs-12">
+            <label>Περιορισμός διαφ.</label>
+            <input ng-model="selectedUser.ads" required>
+            <div ng-messages="selectedUser.ads.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+    </md-card-content>
+    <md-card-content ng-if="!editing">
+        <p class="md-subhead"><strong>Ονοματεπώνυμο:</strong> {{selectedUser.name}}</p>
+        <p class="md-subhead"><strong>Email:</strong> {{selectedUser.email}}</p>
+        <p class="md-subhead"><strong>Χώρα:</strong> {{selectedUser.country}}</p>
+        <p class="md-subhead"><strong>Πόλη:</strong> {{selectedUser.city}}</p>
+        <p class="md-subhead"><strong>Δ/νση:</strong> {{selectedUser.address}}</p>
+        <p class="md-subhead"><strong>Τηλέφωνο:</strong> {{selectedUser.telephone}}</p>
+        <p class="md-subhead"><strong>Εταιρία:</strong> {{selectedUser.company}}</p>
+        <p class="md-subhead"><strong>Περιορισμός διαφ.:</strong> {{selectedUser.ads}}</p>
+    </md-card-content>
+    <md-card-actions>
+        <md-button ng-click="editing = !editing">Edit</md-button>
+        <md-button ng-if="editing" ng-click="updateUser(selectedUser)">Save</md-button>
+    </md-card-actions>
+</md-card>

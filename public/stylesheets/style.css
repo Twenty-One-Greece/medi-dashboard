@@ -1,0 +1,89 @@
+body,
+md-content {
+    background-color: whitesmoke;
+}
+
+md-card,
+md-sidenav,
+img {
+    margin: 0;
+}
+
+md-sidenav {
+    max-width: 250px;
+    min-height: 1000px;
+    margin-right: 25px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+md-card {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.info {
+    padding-top: 10px;
+}
+
+.description {
+    padding-top: 20px;
+}
+
+.card-image {
+    max-height: 300px;
+}
+
+.non-active {
+    color: red
+}
+
+md-sidenav {
+    background: rgb(118, 175, 216);
+}
+
+md-toolbar.md-theme-indigo._md._md-toolbar-transitions {
+    background: rgb(118, 175, 216);
+}
+
+md-content.layout-padding._md {
+    background: rgb(118, 175, 216);
+}
+
+md-sidenav {
+    max-width: 300px;
+}
+
+.md-list-item-inner {
+    color: white;
+}
+
+md-list-item.md-1-line._md-button-wrap._md.md-clickable {
+    height: 40px;
+}
+
+.md-list-item-inner {
+    font-size: 19px;
+}
+
+button.md-button.md-ink-ripple.inside-btn1 {
+    background: #76afd8;
+    color: white;
+}
+
+button.md-button.md-ink-ripple.inside-btn2 {
+    background: #e2c447;
+    color: white;
+}
+
+button.md-button.md-ink-ripple.inside-btn3 {
+    background: #cc0303;
+    color: white;
+}
+
+.featured {
+    margin-top: 60px;
+}

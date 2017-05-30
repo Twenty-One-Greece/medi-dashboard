@@ -1,0 +1,34 @@
+<div class="col-sm-3 col-xs-2 no-padding" ng-controller="menu" ng-include="'includes/sidemenu.html'"></div>
+<!--Ads List-->
+<md-card class="col-sm-8 col-xs-10">
+    <md-card-content>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ΤΙΤΛΟΣ</th>
+                    <th>ΧΡΗΣΤΗΣ</th>
+                    <th>ΚΑΤΗΓΟΡΙΑ</th>
+                    <th>ΕΤΟΣ ΚΑΤ.</th>
+                    <th>ΕΝΕΡΓΟ</th>
+                    <th>ΠΡΟΤΕΡΑΙΟΤΗΤΑ</th>
+                    <th>ΔΡΑΣΕΙΣ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ad in ads">
+                    <td ng-click="selectAd(ad)">{{ad.title}}</td>
+                    <td ng-click="selectUser(ad.userId)">{{ad.username}}</td>
+                    <td>{{ad.category}}</td>
+                    <td>{{ad.year}}</td>
+                    <td>{{ad.active}}</td>
+                    <td>{{ad.featured}}</td>
+                    <td>
+                        <i ng-click="changeActiveStatus(ad, 'Yes')" class="glyphicon glyphicon-ok"></i> &nbsp; &nbsp;
+                        <i ng-click="changeActiveStatus(ad, 'No')" class="glyphicon glyphicon-remove"></i> &nbsp; &nbsp;
+                        <i ng-click="showDeleteConfirm($event, ad._id)" class="glyphicon glyphicon-trash"></i> &nbsp; &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </md-card-content>
+</md-card>
